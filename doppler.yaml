@@ -1,0 +1,3 @@
+setup:
+  project: springboot-config-and-secrets-managed-by-doppler
+  config: dev

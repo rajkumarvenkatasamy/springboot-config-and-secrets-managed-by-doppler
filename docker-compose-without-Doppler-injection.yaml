@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  app:
+    build: .
+    container_name: springboot-config-and-secrets-managed-by-doppler
+    ports:
+      - "8080:8080"
+    environment:
+      - APP_NAME=springboot-config-and-secrets-managed-by-doppler
+      - APP_SECRET=password
+    volumes:
+      - ./src/main/resources/application.properties:/app/application.properties
