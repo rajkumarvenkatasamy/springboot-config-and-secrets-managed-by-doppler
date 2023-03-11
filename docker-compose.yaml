@@ -5,8 +5,8 @@ services:
     build: .
     container_name: springboot-config-and-secrets-managed-by-doppler
     environment: 
-      - APP_NAME
-      - APP_SECRET
-      - APP_CUSTOMPROPERTY
+      - APP_NAME=${APP_NAME}
+      - APP_SECRET=${APP_SECRET}
+      - APP_API_KEY=${APP_API_KEY}
     ports:
       - "8080:8080"

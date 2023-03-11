@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Configuration;
 public class AppConfig {
     String name;
     String secret;
-    String customProperty;
+    String apiKey;
 
     public String getName() {
         return name;
@@ -26,12 +26,12 @@ public class AppConfig {
         this.secret = secret;
     }
 
-    public String getCustomProperty() {
-        return customProperty;
+    public String getApiKey() {
+        return apiKey;
     }
 
-    public void setCustomProperty(String customProperty) {
-        this.customProperty = customProperty;
+    public void setApiKey(String apiKey) {
+        this.apiKey = apiKey;
     }
     
     @Override
@@ -39,7 +39,7 @@ public class AppConfig {
         return "Application Config {\n" +
                 "  applicationName: '" + name + '\'' +
                 ",\n  appSecret: '"+ secret + '\'' +
-                ",\n  customProperty: '"+ customProperty + '\'' +
+                ",\n  apiKey: '"+ apiKey + '\'' +
                 "\n}\n";
     }
 }
